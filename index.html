@@ -1,226 +1,883 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lekhaporā Coaching Center</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    background:#f5f8ff;
-    color:#333;
-}
-
-header{
-    background:linear-gradient(rgba(11,61,145,0.8),rgba(11,61,145,0.8)),
-    url('https://images.unsplash.com/photo-1523240795612-9a054b0db644');
-    background-size:cover;
-    background-position:center;
-    color:white;
-    padding:80px 20px;
-    text-align:center;
-}
-
-header h1{
-    font-size:40px;
-}
-
-header p{
-    margin-top:15px;
-    font-size:18px;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:12px 25px;
-    background:#ffb400;
-    color:#000;
-    font-weight:600;
-    text-decoration:none;
-    border-radius:30px;
-}
-
-nav{
-    background:#0b3d91;
-    display:flex;
-    justify-content:center;
-    padding:12px;
-    flex-wrap:wrap;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:10px 20px;
-    font-weight:500;
-}
-
-section{
-    padding:60px 20px;
-    max-width:1100px;
-    margin:auto;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:28px;
-    color:#0b3d91;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    text-align:center;
-}
-
-.card img{
-    width:100%;
-    border-radius:10px;
-    margin-bottom:15px;
-}
-
-.faculty{
-    display:flex;
-    align-items:center;
-    gap:40px;
-    flex-wrap:wrap;
-}
-
-
-
-.contact{
-    text-align:center;
-    background:#0b3d91;
-    color:white;
-    padding:50px 20px;
-    border-radius:15px;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    background:#082c6c;
-    color:white;
-    margin-top:40px;
-}
-
-/* Responsive */
-@media(max-width:768px){
-    header h1{
-        font-size:28px;
-    }
-    .faculty{
-        flex-direction:column;
-        text-align:center;
-    }
-}
-
-.faculty img{
-    width:300px;
-    border-radius:15px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.2);
-    object-fit:cover;
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LekhaPora Coaching Center | Premium Math & Computer Science Mentorship by Arnab Sir</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Master Mathematics (Classes VI-XII) & Computer Science (Classes VI-X) under the expert guidance of Arnab Sir, M.Tech (IT) Shibpur and ex-Ericsson Senior Architect. Located in Golpark, South Kolkata.">
+  <meta name="keywords" content="Mathematics Coaching, Computer Science Tuition, Python Tuition, Java BlueJ Tuition, Classes 6 to 12 Math, JEE Foundation, HS Math Tuition, South Kolkata Home Tuition, Golpark Gariahat Math Class, Arnab Bera, Shibpur Alumni Math Teacher">
+  <meta name="author" content="LekhaPora Coaching Center">
+  
+  <!-- Favicon placeholder (or custom styled via CSS) -->
+  <link rel="icon" type="image/png" href="images/lekhapora.png">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
 
-<nav>
-<a href="#about">About</a>
-<a href="#courses">Courses</a>
-<a href="#faculty">Faculty</a>
-<a href="#contact">Contact</a>
-</nav>
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="#" class="logo" id="logoLink">
+        <div class="logo-icon">L</div>
+        Lekha<span>Pora</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#about" class="active">About Sir</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#lab">Interactive Lab</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light theme">
+          <!-- Sun Icon -->
+          <svg class="sun-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <!-- Moon Icon -->
+          <svg class="moon-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        
+        <a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Enroll Now</a>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-<header>
-<h1>Lekhaporā Coaching Center</h1>
-    <a href="https://www.teacheron.com/tutor/b3Z2?r=b3Z2" target="_blank" style="display: inline-block;"><img src="https://www.teacheron.com/resources/assets/img/badges/proudToBeTeacher.png" style="width: 300px !important; height: 129px !important"></a>
-<p>Wants to Become an Engineer? Learn Mathematics, Science (Physics only), and Computer Science (Operating Systems, C, C++, and Java) from an Eminent Engineer!!!</p>
-<a href="#contact" class="btn">Enroll Now</a>
-</header>
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text-content">
+        <div class="hero-tag">
+          <span></span> Concept-First Coaching Center
+        </div>
+        <h1 class="hero-title">
+          Building Strong Foundations in <span>Maths & Coding</span>
+        </h1>
+        <p class="hero-desc">
+          Accelerate your child's academic journey with premium mentorship. Designed for ICSE, CBSE, ISC, WBCHSE and WBBSE students (Classes VI–XII) and future engineering aspirants.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-secondary">Request a Demo Class</a>
+          <a href="#courses" class="btn btn-outline">Explore Programs</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>20+</h3>
+            <p>Years IT Industry Exp</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Conceptual Clarity</p>
+          </div>
+          <div class="stat-item">
+            <h3>94%</h3>
+            <p>HS Math Milestone</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-card-container">
+        <div class="hero-glow-bg"></div>
+        <div class="hero-card">
+          <div class="badge-float">M.Tech IIT-Shibpur Alumni</div>
+          <div class="hero-card-header">
+            <div class="avatar-wrapper">
+              <img src="images/arnab.png" alt="Arnab Bera, Founder & Principal Faculty">
+            </div>
+            <div>
+              <div class="card-title-sub">Principal Mentor</div>
+              <div class="card-title-main">Arnab Sir</div>
+            </div>
+          </div>
+          <ul class="card-bullets">
+            <li>
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+              M.Tech in Information Technology
+            </li>
+            <li>
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+              Ex-Senior Architect at Ericsson Inc.
+            </li>
+            <li>
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+              Over 20 Years of Telecom Software Architecture
+            </li>
+            <li>
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+              Focuses on Logical & Structured Problem Solving
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="about">
-<h2 class="section-title">About Us</h2>
-<p style="text-align:center; max-width:800px; margin:auto;">
-We build strong foundations in Mathematics & Science for Classes 6–10 (WBBSE | CBSE | ICSE).
-Our focus is conceptual clarity, logical thinking, and engineering-oriented preparation.
-</p>
-</section>
+  <!-- ==========================================================================
+       ABOUT FACULTY SECTION
+       ========================================================================== -->
+  <section class="section-padding" id="about">
+    <div class="container about-grid">
+      <div class="about-img-container">
+        <div class="about-img-frame">
+          <img src="images/arnab.png" alt="Arnab Bera Teaching">
+          <div class="about-experience-badge">
+            <h4>20+</h4>
+            <p>Years Industry<br>Experience</p>
+          </div>
+        </div>
+        <div class="about-img-deco"></div>
+      </div>
+      
+      <div class="about-text-content">
+        <span class="section-subtitle">Meet Your Instructor</span>
+        <h2 class="section-title">An Eminent Engineer Turned Passionate Educator</h2>
+        <p class="section-desc" style="margin-bottom: 24px;">
+          Arnab Sir believes that learning is not about memorizing formulas, but about cultivating analytical thinking. With a rich background spanning two decades in telecom system architecture at <strong>Ericsson Inc.</strong>, he infuses software engineering concepts and structured troubleshooting methodologies into junior mathematics and computer science curricula.
+        </p>
+        <p class="section-desc" style="margin-bottom: 32px;">
+          He holds an <strong>M.Tech in Information Technology</strong> from Bengal Engineering and Science University, Shibpur (IIEST Shibpur) and a <strong>B.E. in Electronics Engineering</strong>. His mission at LekhaPora is to bridge academic theories with real-world logical modeling.
+        </p>
+        
+        <div class="about-meta">
+          <div class="bio-point">
+            <div class="bio-icon">
+              <!-- Math Symbol Icon -->
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M19 5h-7l-4 14-3-6H3"></path>
+              </svg>
+            </div>
+            <div class="bio-info">
+              <h4>Concept-Based Math Teaching</h4>
+              <p>Specialized focus on making algebra, geometry, and arithmetic easy to visualize and apply.</p>
+            </div>
+          </div>
+          
+          <div class="bio-point">
+            <div class="bio-icon">
+              <!-- Code Icon -->
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path>
+              </svg>
+            </div>
+            <div class="bio-info">
+              <h4>Computer Science Logic building</h4>
+              <p>Teaching Java (BlueJ framework), Python, and object-oriented paradigms from the ground up.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="courses">
-<h2 class="section-title">Our Courses</h2>
-<div class="cards">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
-<h3>Mathematics (6–10)</h3>
-<p>Strong concept building & problem-solving skills.</p>
-</div>
+  <!-- ==========================================================================
+       DEPARTMENTS SECTION
+       ========================================================================== -->
+  <section class="section-padding departments-section" id="departments">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Dual Pillars of Excellence</span>
+        <h2 class="section-title">Our Main Departments</h2>
+        <p class="section-desc">We offer deep, specialized learning modules tailored to help students dominate academic exams and competitive pathways.</p>
+      </div>
+      
+      <div class="dept-grid">
+        <!-- Mathematics Department -->
+        <div class="dept-card dept-card-math">
+          <div class="dept-header">
+            <div class="dept-icon">∑</div>
+            <h3 class="dept-title">Mathematics Department</h3>
+          </div>
+          <p class="dept-desc">
+            Designed to build bulletproof numerical foundations and logical thinking. We prepare students of Classes 6-12 for school curricula (WBBSE, CBSE, ICSE, ISC, WBCHSE) and establish advanced foundations for JEE Mains & Advanced engineering tracks.
+          </p>
+          <ul class="dept-features">
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+              Step-by-Step Geometry Visualization
+            </li>
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+              Board Exam Strategy & High-Scoring Tips
+            </li>
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+              Weekly Worksheets & Real-time Doubt Clearing
+            </li>
+          </ul>
+          <a href="#courses" class="btn btn-outline">Explore Math Classes</a>
+        </div>
+        
+        <!-- Computer Science Department -->
+        <div class="dept-card dept-card-cs">
+          <div class="dept-header">
+            <div class="dept-icon">&lt;/&gt;</div>
+            <h3 class="dept-title">Computer Science Department</h3>
+          </div>
+          <p class="dept-desc">
+            Led directly by ex-Ericsson Software Architect. We teach programming not as syntax, but as algorithms. Students learn software structure, system logical flows, and clean coding practices in Java and Python.
+          </p>
+          <ul class="dept-features">
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+              School Computer Applications Syllabus (Java, Python)
+            </li>
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+              Object-Oriented Programming (OOPs) Fundamentals
+            </li>
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+              Interactive coding lab challenges & assignments
+            </li>
+          </ul>
+          <a href="#courses" class="btn btn-outline" style="color: #10b981; border-color: #10b981;">Explore Code Classes</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
-<h3>Science (6–10)</h3>
-<p>Early preparation for engineering entrance exams.</p>
-</div>
+  <!-- ==========================================================================
+       INTERACTIVE LAB PLAYGROUND
+       ========================================================================== -->
+  <section class="section-padding lab-section" id="lab">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Experience Our Learning Vibe</span>
+        <h2 class="section-title">LekhaPora Coaching Center</h2>
+        <p class="section-desc">Try your analytical skills on these mini challenges designed by Arnab Sir. Select a topic and see if you get it right!</p>
+      </div>
+      
+      <div class="lab-container">
+        <div class="lab-info-panel">
+          <h3>Interactive Lab</h3>
+          <p>We believe in interactive learning. Solve a riddle to see how we clarify logic in our physical batches.</p>
+          <div class="lab-nav-tabs">
+            <button class="lab-tab-btn active" data-tab="math">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M9 7h6m-6 4h6m-6 4h6"></path>
+              </svg>
+              Math Challenge
+            </button>
+            <button class="lab-tab-btn" data-tab="cs">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path>
+              </svg>
+              Computer Science Challenge
+            </button>
+          </div>
+        </div>
+        
+        <div class="lab-playground-panel">
+          <!-- Math Lab Content -->
+          <div class="lab-content active" id="mathLab">
+            <div class="quiz-question-box">
+              <span class="quiz-badge">Math Class (Arithmetic Reasoning)</span>
+              <p class="quiz-question">Arnab Sir asks: If a train travels at a speed of 72 km/h, how many meters does it cover in exactly 15 seconds?</p>
+              
+              <div class="quiz-options">
+                <button class="quiz-option-btn" data-correct="false">
+                  <span>A) 180 meters</span>
+                  <span class="indicator"></span>
+                </button>
+                <button class="quiz-option-btn" data-correct="false">
+                  <span>B) 240 meters</span>
+                  <span class="indicator"></span>
+                </button>
+                <button class="quiz-option-btn" data-correct="true">
+                  <span>C) 300 meters</span>
+                  <span class="indicator"></span>
+                </button>
+                <button class="quiz-option-btn" data-correct="false">
+                  <span>D) 360 meters</span>
+                  <span class="indicator"></span>
+                </button>
+              </div>
+            </div>
+            <div class="quiz-feedback" id="mathFeedback"></div>
+          </div>
+          
+          <!-- CS Lab Content -->
+          <div class="lab-content" id="csLab">
+            <div class="quiz-question-box">
+              <span class="quiz-badge">Java BlueJ Class (Precedence)</span>
+              <p class="quiz-question">Arnab Sir asks: What will be the final output of the following Java expression? <br><code>int result = 5 + 3 * 2 - 8 / 4;</code></p>
+              
+              <div class="quiz-options">
+                <button class="quiz-option-btn" data-correct="false">
+                  <span>A) 14</span>
+                  <span class="indicator"></span>
+                </button>
+                <button class="quiz-option-btn" data-correct="true">
+                  <span>B) 9</span>
+                  <span class="indicator"></span>
+                </button>
+                <button class="quiz-option-btn" data-correct="false">
+                  <span>C) 10</span>
+                  <span class="indicator"></span>
+                </button>
+                <button class="quiz-option-btn" data-correct="false">
+                  <span>D) 7</span>
+                  <span class="indicator"></span>
+                </button>
+              </div>
+            </div>
+            <div class="quiz-feedback" id="csFeedback"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
-<h3>Computer Science (6-12)</h3>
-<p>Computer Science fundamentals with C, C++ and JAVA programming .</p>
-</div>
-</div>
-</section>
+  <!-- ==========================================================================
+       COURSES OFFERED
+       ========================================================================== -->
+  
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Pick the Right Track</span>
+        <h2 class="section-title">Our Courses & Batches</h2>
+        <p class="section-desc">Fully customized batches focusing on board syllabus excellence (CBSE, ICSE, WBBSE) and conceptual logical growth.</p>
+      </div>
+      
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Departments</button>
+        <button class="filter-btn" data-filter="math">Mathematics</button>
+        <button class="filter-btn" data-filter="cs">Computer Science</button>
+      </div>
+      
+      <div class="courses-grid">
+        <!-- Math 6-8 Card -->
+        <div class="course-card" data-category="math">
+          <div class="course-img-wrapper">
+            <img src="images/maths-tutoring-lessons-flyer-design-template-bccd6c8a6966e9b01ae496d2ca845360_screen.jpg" alt="Mathematics Class 6 to 8">
+            <span class="course-badge">Mathematics</span>
+          </div>
+          <div class="course-content">
+            <div class="course-meta">
+              <span>Classes 6–8</span>
+              <span>ICSE | CBSE | WBBSE</span>
+            </div>
+            <h3 class="course-title">Middle School Math Foundation</h3>
+            <p class="course-desc">Building strong core fundamentals in geometry, ratio analysis, decimals, fractions, and logic reasoning before high school hurdles.</p>
+            <div class="course-footer">
+              <div class="course-price">Batch status: <span>Open</span></div>
+              <a href="#contact" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">Enquire</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Math 9-10 Card -->
+        <div class="course-card" data-category="math">
+          <div class="course-img-wrapper">
+            <img src="images/lekhaporainstagram.png" alt="Board Math Exam Prep">
+            <span class="course-badge">Mathematics</span>
+          </div>
+          <div class="course-content">
+            <div class="course-meta">
+              <span>Classes 9–10</span>
+              <span>ICSE | CBSE | WBBSE</span>
+            </div>
+            <h3 class="course-title">Board Math Mastery Batch</h3>
+            <p class="course-desc">Targeted curriculum focusing on Class X board exam patterns. Intensive practice sets, mock boards, trigonometry, and algebra logic.</p>
+            <div class="course-footer">
+              <div class="course-price">Batch status: <span>Filling Fast</span></div>
+              <a href="#contact" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- JEE Foundation Math -->
+        <div class="course-card" data-category="math">
+          <div class="course-img-wrapper">
+            <img src="images/IIEST-ians.png" alt="JEE Foundation Math">
+            <span class="course-badge">IIT JEE Foundation</span>
+          </div>
+          <div class="course-content">
+            <div class="course-meta">
+              <span>Classes 8–10</span>
+              <span>Advanced Prep</span>
+            </div>
+            <h3 class="course-title">JEE Math Starter Program</h3>
+            <p class="course-desc">Early preparation focusing on analytical reasoning, coordinate geometry, calculus fundamentals, and competitive pattern papers.</p>
+            <div class="course-footer">
+              <div class="course-price">Batch status: <span>Limited Seats</span></div>
+              <a href="#contact" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">Enquire</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Senior Secondary & JEE Advanced Math -->
+        <div class="course-card" data-category="math">
+          <div class="course-img-wrapper">
+            <img src="images/lekhaporashekho-banner.png" alt="Senior Mathematics and JEE Advanced">
+            <span class="course-badge">Higher Secondary & JEE</span>
+          </div>
+          <div class="course-content">
+            <div class="course-meta">
+              <span>Classes 11–12</span>
+              <span>CBSE | ISC | WBCHSE | JEE</span>
+            </div>
+            <h3 class="course-title">Advanced HS & JEE Mathematics</h3>
+            <p class="course-desc">Comprehensive preparation in Calculus, Vectors, 3D Geometry, Algebra, and Trigonometry. Direct focus on Board Exams and JEE Mains & Advanced techniques.</p>
+            <div class="course-footer">
+              <div class="course-price">Batch status: <span>Open for Admission</span></div>
+              <a href="#contact" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Computer Applications 9-10 -->
+        <div class="course-card" data-category="cs">
+          <div class="course-img-wrapper">
+            <img src="images/ChatGPT Image Mar 30, 2026, 10_04_22 AM.png" alt="Java BlueJ programming">
+            <span class="course-badge">Computer Science</span>
+          </div>
+          <div class="course-content">
+            <div class="course-meta">
+              <span>Classes 9–10</span>
+              <span>ICSE | CBSE</span>
+            </div>
+            <h3 class="course-title">School Programming (Java / Python)</h3>
+            <p class="course-desc">Specialized ICSE BlueJ Java structure & CBSE Python core scripts. Logic formulation, array operations, OOPs (Classes & Objects) and string handling.</p>
+            <div class="course-footer">
+              <div class="course-price">Batch status: <span>Open</span></div>
+              <a href="#contact" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coding Foundation 6-8 -->
+        <div class="course-card" data-category="cs">
+          <div class="course-img-wrapper">
+            <img src="images/ChatGPT Image Jan 2, 2026, 09_29_33 AM.png" alt="Logic building coding for kids">
+            <span class="course-badge">Computer Science</span>
+          </div>
+          <div class="course-content">
+            <div class="course-meta">
+              <span>Classes 6–8</span>
+              <span>Logic Coding</span>
+            </div>
+            <h3 class="course-title">CS Logic & Scratch Coding</h3>
+            <p class="course-desc">Designed to spark an early interest in computing. Algorithmic puzzles, control structures (loops & conditionals), and modular thinking.</p>
+            <div class="course-footer">
+              <div class="course-price">Batch status: <span>Open</span></div>
+              <a href="#contact" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CLASSROOM GALLERY SECTION (USING ALL LOCAL IMAGES)
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--bg-tertiary);" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Life at LekhaPora</span>
+        <h2 class="section-title">Our Classroom Gallery & Achievements</h2>
+        <p class="section-desc">A visual compilation of real classroom sessions, interactive lecture notes, achievements, and scoring highlights under Arnab Sir's direct mentorship.</p>
+      </div>
+
+      <!-- Gallery Filter Tabs -->
+      <div class="filter-tabs" style="margin-bottom: 30px;">
+        <button class="gallery-filter-btn" data-gallery-filter="classroom">Batches & Classroom</button>
+      </div>
+      
+      <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px;">
+        
+        <!-- --- CLASSROOM GROUP --- -->
+        <div class="gallery-item-card" data-gallery-category="classroom" style="border-radius: var(--radius-md); overflow: hidden; background: var(--bg-secondary); border: 1px solid var(--border-color); cursor: pointer; transition: var(--transition);">
+          <img src="images/arnab.png" alt="Coaching batch session" style="width: 100%; height: 180px; object-fit: cover; display: block;">
+        </div>
+        <div class="gallery-item-card" data-gallery-category="classroom" style="border-radius: var(--radius-md); overflow: hidden; background: var(--bg-secondary); border: 1px solid var(--border-color); cursor: pointer; transition: var(--transition);">
+          <img src="images/1.png" alt="Coaching batch session duplicate" style="width: 100%; height: 180px; object-fit: cover; display: block;">
+        </div>
+        <div class="gallery-item-card" data-gallery-category="classroom" style="border-radius: var(--radius-md); overflow: hidden; background: var(--bg-secondary); border: 1px solid var(--border-color); cursor: pointer; transition: var(--transition);">
+          <img src="images/2.png" alt="Board math practice session" style="width: 100%; height: 180px; object-fit: cover; display: block;">
+        </div>
+
+        <div class="gallery-item-card" data-gallery-category="classroom" style="border-radius: var(--radius-md); overflow: hidden; background: var(--bg-secondary); border: 1px solid var(--border-color); cursor: pointer; transition: var(--transition);">
+          <img src="images/3.png" alt="Classroom seating view" style="width: 100%; height: 180px; object-fit: cover; display: block;">
+        </div>
 
 
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Gallery Lightbox Modal -->
+  <div id="galleryLightbox" class="lightbox-modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 3000; display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+    <span class="close-lightbox" style="position: absolute; top: 24px; right: 32px; color: white; font-size: 2.5rem; cursor: pointer; font-weight: 700; transition: 0.2s;">&times;</span>
+    <img id="lightboxImg" src="" alt="Zoomed view" style="max-width: 90%; max-height: 85%; object-fit: contain; border-radius: var(--radius-sm); border: 2px solid rgba(255,255,255,0.1); box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    <div id="lightboxCaption" style="position: absolute; bottom: 30px; color: rgba(255,255,255,0.8); font-size: 1rem; font-family: var(--font-body); text-align: center; width: 100%; padding: 0 20px;"></div>
+  </div>
 
-<section id="faculty">
-<h2 class="section-title">Faculty</h2>
-<div class="faculty">
-<img id="facultyPhoto" src="images/arnab.png" alt="Arnab Sir">
-<div>
-<h3>Arnab Sir</h3>
-<p><strong>Shibpur BE College Alumni</strong></p>
-<p>Eminent Engineer and passionate educator dedicated to building strong conceptual foundations in Mathematics.</p>
-<a href="https://www.teacheron.com/tutor/b3Z2?r=b3Z2" target="_blank" style="display: inline-block;"><img src="https://www.teacheron.com/resources/assets/img/badges/proudToBeTeacher.png" style="width: 300px !important; height: 129px !important"></a>
-</div>
-</div>
-</section>
+  <!-- ==========================================================================
+       TESTIMONIALS SECTION
+       ========================================================================== -->
+  <section class="section-padding testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Real Student Success</span>
+        <h2 class="section-title">What Parents Say</h2>
+        <p class="section-desc">Read reviews directly from families in South Kolkata highlighting the conceptual transformation under Arnab Sir's mentorship.</p>
+      </div>
+      
+      <div class="testimonials-wrapper">
+        <div class="testimonial-track">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <span class="quote-icon">“</span>
+              <p class="testimonial-text">
+                "Arnab Sir has transformed my son's approach to Mathematics. Earlier, he used to memorize math formulas. Now he asks 'Why does this formula work?' and visualizes geometry. His ICSE Class 9 marks shot up from 65% to 92%!"
+              </p>
+              <div class="testimonial-author">
+                <span class="author-name">S. Mukherjee</span>
+                <span class="author-role">Parent of St. Xavier's Student (Class 9)</span>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <span class="quote-icon">“</span>
+              <p class="testimonial-text">
+                "Coming from a tech background myself, I was looking for a tutor who could explain coding logically rather than just asking them to mug up Java codes. Arnab Sir's M.Tech background and industry experience are visible. Excellent CS mentorship."
+              </p>
+              <div class="testimonial-author">
+                <span class="author-name">Anirban Sen</span>
+                <span class="author-role">Parent of Class 10 Board Student (CBSE)</span>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <span class="quote-icon">“</span>
+              <p class="testimonial-text">
+                "Perfect blend of mathematics and logical coding. The batch sizes are kept small, ensuring personalized attention. Arnab Sir tracks progress with regular unit tests. Highly recommended in the Ballygunge / Golpark area."
+              </p>
+              <div class="testimonial-author">
+                <span class="author-name">Rupa Bhattacharya</span>
+                <span class="author-role">Parent of Class 8 Student (WBBSE)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-dots"></div>
+      </div>
+    </div>
+  </section>
 
-<section id="contact">
-<div class="contact">
-<h2>Contact Us</h2>
-<p>📍 Golpark – Gariahat, South Kolkata</p>
-<p>📞 9830015487</p>
-<p>📧 educatorarnab@gmail.com</p>
-<br>
-<a href="tel:9830015487" class="btn">Call Now</a>
-</div>
-</section>
+  <!-- ==========================================================================
+       FAQ SECTION (ACCORDION)
+       ========================================================================== -->
+  <section class="section-padding" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Clear your queries regarding our batch timings, course fees, structure, and home tuition support.</p>
+      </div>
+      
+      <div class="faq-grid">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <span class="faq-question">What is the student-to-teacher ratio in Arnab Sir's batches?</span>
+            <div class="faq-icon-wrapper">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+          </div>
+          <div class="faq-body">
+            <div class="faq-content">
+              To guarantee focused attention, our physical batches at Golpark are strictly restricted to 8-10 students. This allows Arnab Sir to personally inspect worksheets, spot individual weaknesses, and clear doubts in real-time.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <span class="faq-question">Does Arnab Sir provide Home Tuition classes?</span>
+            <div class="faq-icon-wrapper">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+          </div>
+          <div class="faq-body">
+            <div class="faq-content">
+              Yes, premium 1-on-1 home tutoring slots are available for selected regions across South Kolkata (such as Ballygunge, Gariahat, Golpark, Jodhpur Park, and Dhakuria). Because slots are limited due to Sir's schedule, prior booking via our form is advised.
+            </div>
+          </div>
+        </div>
 
-<footer>
-© 2026 Lekhaporā Coaching Center | All Rights Reserved
-</footer>
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <span class="faq-question">How does the Computer Science department organize practice?</span>
+            <div class="faq-icon-wrapper">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+          </div>
+          <div class="faq-body">
+            <div class="faq-content">
+              For computer science (Java/BlueJ & Python), students are taught logic building on paper first (dry running code outputs). Subsequently, hands-on coding classes are scheduled where students write programs and debug errors on laptops under direct supervision.
+            </div>
+          </div>
+        </div>
 
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <span class="faq-question">Are there separate batches for different school boards (ICSE vs CBSE vs WBBSE)?</span>
+            <div class="faq-icon-wrapper">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+          </div>
+          <div class="faq-body">
+            <div class="faq-content">
+              Yes. WBBSE, CBSE, and ICSE follow distinct math and CS syllabi. To ensure targeted academic readiness, our batches are categorized according to boards, aligning with school progress cards and scheduled examinations.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT & ENROLLMENT FORM SECTION
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--bg-primary);" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info-panel">
+        <h3>Start Your Learning Today</h3>
+        <p>Drop us a line or call us directly. Arnab Sir will respond to guide you on the best program schedule for your child.</p>
+        
+        <div class="contact-links">
+          <div class="contact-link-item">
+            <div class="contact-link-icon">
+              <!-- Location Icon -->
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 2a8 8 0 00-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 00-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-link-text">
+              <h4>Location Address</h4>
+              <p>103, Ballygunge Gardens, Golpark (Gariahat), South Kolkata – 700029</p>
+            </div>
+          </div>
+          
+          <div class="contact-link-item">
+            <div class="contact-link-icon">
+              <!-- Phone Icon -->
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+              </svg>
+            </div>
+            <div class="contact-link-text">
+              <h4>Phone / SMS / WhatsApp</h4>
+              <p><a href="tel:+919830015487">+91 9830015487</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-link-item">
+            <div class="contact-link-icon">
+              <!-- Email Icon -->
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <path d="M22 6l-10 7L2 6"></path>
+              </svg>
+            </div>
+            <div class="contact-link-text">
+              <h4>Email Coordinates</h4>
+              <p><a href="mailto:educatorarnab@gmail.com">educatorarnab@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="social-links">
+          <a href="tel:+919830015487" class="social-icon" aria-label="Call Faculty">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+          </a>
+          <a href="https://wa.me/919830015487" target="_blank" class="social-icon" aria-label="WhatsApp Faculty">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.731-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966C16.588 2.023 14.12 1 11.993 1 6.556 1 2.133 5.369 2.13 10.799c-.002 1.77.476 3.498 1.385 5.016l-.986 3.605 3.698-.971c1.5.82 3.11 1.25 4.72 1.25h.1c.01 0 0 0 0 0z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="enroll-card">
+        <h3>Class Enrollment Inquiry</h3>
+        <p>Fill out this form and Arnab Sir will coordinate for the batch demo session.</p>
+        
+        <form id="enrollmentForm" novalidate>
+          <div class="form-group">
+            <label for="studentName">Student Name *</label>
+            <input type="text" id="studentName" class="form-input" placeholder="Enter student's full name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="guardianPhone">Parent / Guardian Mobile Number *</label>
+            <input type="tel" id="guardianPhone" class="form-input" placeholder="10-digit number (e.g. 9830015487)" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="studentEmail">Parent Email Address (Optional)</label>
+            <input type="email" id="studentEmail" class="form-input" placeholder="e.g. parent@gmail.com">
+          </div>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label for="department">Preferred Track *</label>
+              <select id="department" class="form-input" required>
+                <option value="" disabled selected>Select Track</option>
+                <option value="math">Mathematics Only</option>
+                <option value="cs">Computer Science Only</option>
+                <option value="both">Both Math & Computer Science</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="studentClass">Student Class *</label>
+              <select id="studentClass" class="form-input" required>
+                <option value="" disabled selected>Select Class</option>
+                <option value="6">Class VI</option>
+                <option value="7">Class VII</option>
+                <option value="8">Class VIII</option>
+                <option value="9">Class IX</option>
+                <option value="10">Class X</option>
+                <option value="11">Class XI</option>
+                <option value="12">Class XII</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="additionalNotes">Message / School Name / Home tuition request</label>
+            <textarea id="additionalNotes" class="form-input" placeholder="Enter school name, specific boards, or tell us if you need home tutoring across South Kolkata..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-secondary" style="width: 100%; border-radius: var(--radius-sm); margin-top: 10px;">
+            Submit Enrollment Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-about">
+        <h4 style="font-size: 1.3rem; margin-bottom: 16px;">Lekha<span>Pora</span></h4>
+        <p>Concept-based Mathematics & Computer Science academy founded by Arnab Bera, dedicated to mentoring middle and high school students for a logical, engineering-oriented career.</p>
+        <p>📍 Golpark, South Kolkata</p>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Academy Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Arnab Sir</a></li>
+          <li><a href="#departments">Main Departments</a></li>
+          <li><a href="#courses">Offered Batches</a></li>
+          <li><a href="#lab">Interactive Lab</a></li>
+          <li><a href="#faq">Frequently Asked FAQs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Our Curriculum</h4>
+        <ul class="footer-links">
+          <li><a href="#courses">Classes VI-VIII Mathematics</a></li>
+          <li><a href="#courses">Classes IX-X Board Prep</a></li>
+          <li><a href="#courses">Classes XI-XII & JEE Advanced Math</a></li>
+             <li><a href="#courses">Computer Science</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2a8 8 0 00-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 00-8-8z"></path></svg>
+            103, Ballygunge Gardens, Kolkata - 700029
+          </li>
+          <li>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+            +91 9830015487 (Call / WhatsApp)
+          </li>
+          <li>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path></svg>
+            educatorarnab@gmail.com
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>© 2026 LekhaPora Coaching Center. All Rights Reserved.</p>
+      <p>Developed with passion for strong foundations.</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       FLOATING ACTIONS (WhatsApp & Scroll Top)
+       ========================================================================== -->
+  <div class="floating-actions">
+    <a href="https://wa.me/919830015487" target="_blank" class="floating-btn whatsapp-btn" aria-label="Chat on WhatsApp">
+      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.731-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966C16.588 2.023 14.12 1 11.993 1 6.556 1 2.133 5.369 2.13 10.799c-.002 1.77.476 3.498 1.385 5.016l-.986 3.605 3.698-.971c1.5.82 3.11 1.25 4.72 1.25h.1c.01 0 0 0 0 0z"/>
+      </svg>
+    </a>
+    <button class="floating-btn back-to-top-btn" id="backToTopBtn" aria-label="Back to Top">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path d="M18 15l-6-6-6 6"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Success Inquiry Popup Alert -->
+  <div class="success-popup" id="successPopup">
+    <div class="success-popup-icon">
+      <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+      </svg>
+    </div>
+    <div class="success-popup-text">
+      <h4>Inquiry Submitted!</h4>
+      <p>Arnab Sir will contact you shortly via call or WhatsApp.</p>
+    </div>
+  </div>
+
+  <!-- JS Code -->
+  <script src="script.js"></script>
 </body>
 </html>
